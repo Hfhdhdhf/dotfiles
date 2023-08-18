@@ -1,0 +1,33 @@
+{
+	//position and shit
+	"layer": "center",
+	"position": "bottom",
+	"height": "10px",
+	// modules 
+	"modules-right": ["custom/restart", "custom/poweroff"],
+	"modules-center": ["custom/vscode", "custom/subl","custom/firefox", "custom/terminal"],
+	"custom/firefox": {
+		"format": "󰈹",
+		"on-click": "firefox"
+	},
+	"custom/vscode": {
+		"format": "󰨞",
+		"on-click": "code"
+	},
+	"custom/subl": {
+		"format": "󰅩",
+		"on-click": "subl"
+	},
+	"custom/restart": {
+		"format": "󰜉",
+		"on-double-click": "systemctl reboot"
+	},
+	"custom/poweroff": {
+		"format": "⏻",
+		"on-double-click": "systemctl poweroff"
+	},
+	"custom/terminal": {
+		"format": "",
+		"on-click": "kitty"
+	}
+}

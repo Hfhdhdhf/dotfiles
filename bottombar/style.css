@@ -1,0 +1,48 @@
+* {
+	font-size: 20px;
+	color: white;
+}
+
+window#waybar {
+	background: transparent;
+	color: gray;
+}
+#custom-twitter {
+	font-size: 40px;
+	margin-left: 10px;
+}
+#custom-subl {
+	font-size: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: green;
+}
+#custom-restart {
+	font-size: 40px;
+	margin-left: 10px;
+	color: cyan;
+}
+#custom-poweroff {
+	font-size: 40px;
+	margin-left: 10px;
+	color: red;
+}
+#custom-vscode {
+	margin-right: 3px;
+	font-size: 40px;
+	color: blue;
+}
+#custom-firefox {
+	font-size: 40px;
+	color: orangered;
+}
+#custom-terminal {
+	margin-left: 10px;
+	font-size: 40px;
+	color: lightgreen;
+}
+#custom-firefox button.active, #custom-firefox button.focused{
+	padding: 0 22px;
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+	background: gray;
+}

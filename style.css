@@ -1,0 +1,83 @@
+* {
+	font-size: 20px;
+	font-family: monospace;
+}
+
+window#waybar {
+	background: transparent;
+	color: #969190;
+	border-radius: 10px;
+}
+#workspaces,
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#tray {
+	background: #1a1a1a;
+}
+#custom-calendar {
+	margin-right: 10px;
+	font-size: 20px;
+}
+#custom-twitter {
+	font-size: 20px;
+	margin-left: 10px;
+	color: lightcyan;
+}
+#custom-whatsapp {
+	font-size: 20px;
+	margin-left: 10px;
+	color: green;
+}
+#custom-firefox {
+	font-size: 20px;
+	color: orange;
+}
+#custom-vscode {
+	margin-left: 10px;
+	font-size: 20px;
+	color: blue;
+}
+#clock {
+	margin-left: 5px;
+	border-radius: 10px;
+}
+#workspaces {
+	background: transparent;
+	font-size: 11px;
+	margin-left: 5px;
+}
+#workspaces button{
+    border-radius: 15px;
+    padding: 1px 10px;
+    font-weight: bolder;
+    background-color: #423f3e;
+    margin-left: 5px;
+}
+
+#workspaces button.active, #workspaces button.focused{
+    padding: 0 22px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    
+    background: #7C9D96;
+}
+#pulseaudio {
+	color: #268bd2;
+	margin-right: 5px;
+}
+#memory {
+	color: #2aa198;
+	margin-left: 5px;
+}
+#cpu {
+	color: #6c71c4;
+	border-radius: 20px;
+	margin-left: 5px;
+}
+
+#clock,
+#pulseaudio,
+#memory,
+cpu {
+	padding: 0 10px;
+}

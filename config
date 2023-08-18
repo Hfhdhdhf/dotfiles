@@ -1,0 +1,100 @@
+// -*- mode: json -*-
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "icon-size": 10,
+
+  "modules-left": [
+    "clock#2",
+    "clock#1",
+    "custom/whatsapp",
+    "custom/twitter",
+  ],
+  "modules-center": [
+    "wlr/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "cpu",
+  ],
+  "clock#2": {
+    "format": "{:%H:%M}",
+    "tooltip": false
+  },
+  "custom/calendar": {
+    "format": "",
+    "on-click": "hkal calendar"
+  },
+  "custom/twitter": {
+    "format": "󰕄",
+    "tooltip": "󰕄",
+    "on-click": "firefox twitter.com"
+  },
+  "custom/whatsapp": {
+    "format": "󰖣",
+    "on-click": "firefox web.whatsapp.com"
+  },
+  "custom/firefox": {
+    "format": "󰈹",
+    "on-click": "firefox",
+    "tooltip": "open firefox"
+  },
+  "custom/dropdown": {
+    "format": "󱐀",
+    "on-click": "./home/rafa/waybar/dropdown.sh"
+  },
+  "custom/volume": {
+    "type": "custom/progress",
+    "exec": "pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \\([0-9][0-9]*\\)%.*,\\1,'",
+    "format": "{value}%",
+    "interval": 1,
+    "min": 0,
+    "max": 100,
+    "on-click": "swaymsg exec termite --class=popup --exec='pactl set-sink-volume @DEFAULT_SINK@ $(zenity --scale --text=Volume --value=$(pactl list sinks | grep \"^[[:space:]]Volume:\" | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e \"s,.* \\([0-9][0-9]*\\)%.*,\\1,\") --min-value=0 --max-value=100)%'"
+  },
+  "custom/vscode": {
+    "format": "󰨞",
+    "on-click": "code",
+    "tooltip": "open visual studio code"
+  },
+  "clock#1": {
+    "format": "{:%d-%m-%y}",
+    "tooltip": false
+  },
+  "wlr/workspaces": {
+     "sort-by-name": true,
+     "on-click": "activate"
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "🎧",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+  "on-click": "pavucontrol"
+},
+  "memory": {
+    "interval": 5,
+    "format": "Mem {}%"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "CPU {usage:2}%"
+  },
+  "tray": {
+    "icon-size": 20
+  }
+}
